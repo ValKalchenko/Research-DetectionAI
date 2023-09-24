@@ -18,7 +18,9 @@ face = face_classifier.detectMultiScale(
 for (x, y, w, h) in face:
     cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 4)
 
-img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+crop_img = img[y:y+h, x:x+w]
+img_rgb = cv2.cvtColor(crop_img, cv2.COLOR_BGR2RGB)
+
 
 
 plt.figure(figsize=(20,10))
