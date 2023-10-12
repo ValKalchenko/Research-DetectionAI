@@ -1,7 +1,7 @@
 import cv2
 import matplotlib.pyplot as plt
 
-imagePath = 'Face.jpg'
+imagePath = 'Face_Classification/Static/200.jpg'
 img = cv2.imread(imagePath)
 #print(img.shape)
 gray_image = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
